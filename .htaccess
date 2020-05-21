@@ -1,8 +1,8 @@
-Option -Indexes
+Options -Indexes
 
 RewriteEngine On
-RewriteCond %{REQUEST_FDILENAME}.php -f
+RewriteCond %{REQUEST_FILENAME}.php -f
 RewriteRule (.*) $1.php [L]
 
-RewriteCond %{REQUEST_FDILENAME}.html -f
+RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule (.*) $1.html [L]

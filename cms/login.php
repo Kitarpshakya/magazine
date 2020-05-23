@@ -10,13 +10,13 @@
     <title>Gentelella Alela! | </title>
 
     <!-- Bootstrap -->
-    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="../assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
-    <link href="../assets/nprogress/nprogress.css" rel="stylesheet">
+    <link href="assets/nprogress/nprogress.css" rel="stylesheet">
     <!-- Animate.css -->
-    <link href="../assets/animate.css/animate.min.css" rel="stylesheet">
+    <link href="assets/animate.css/animate.min.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
     <link href="css/custom.min.css" rel="stylesheet">
@@ -30,7 +30,7 @@
       <div class="login_wrapper">
         <div class="animate form login_form">
           <section class="login_content">
-            <form>
+            <form action="process/login.php" method="post">
               <h1>Login Form</h1>
               <div>
                 <input type="text" class="form-control" placeholder="Username" required="" />
@@ -62,7 +62,7 @@
           </section>
         </div>
 
-        <div id="register" class="animate form registration_form">
+        <!-- <div id="register" class="animate form registration_form"> -->
           <section class="login_content">
             <form>
               <h1>Create Account</h1>
@@ -95,7 +95,7 @@
               </div>
             </form>
           </section>
-        </div>
+        <!-- </div> -->
       </div>
     </div>
   </body>

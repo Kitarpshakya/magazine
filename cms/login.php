@@ -1,5 +1,6 @@
 <?php
   include $_SERVER['DOCUMENT_ROOT'].'config/init.php';
+  include 'inc/checklogin.php';
   ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Gentelella Alela! | </title>
+    <title>Magazine | Login</title>
 
     <!-- Bootstrap -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -20,7 +21,7 @@
     <link href="assets/nprogress/nprogress.css" rel="stylesheet">
     <!-- Animate.css -->
     <link href="assets/animate.css/animate.min.css" rel="stylesheet">
-
+    <script src="assets/js/jquery.min.js"></script>
     <!-- Custom Theme Style -->
     <link href="assets/css/custom.min.css" rel="stylesheet">
   </head>
@@ -41,6 +42,9 @@
               </div>
               <div>
                 <input type="password" class="form-control" placeholder="Password" required="" name="password"/>
+              </div>
+              <div>
+                <input type="checkbox" name="rememberme" />Remember Me
               </div>
               <div>
                 <button class="btn btn-default submit" type="submit">Log in</button>

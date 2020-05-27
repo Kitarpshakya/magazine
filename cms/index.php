@@ -1,4 +1,8 @@
-<?php include 'inc/header.php'?>
+<?php 
+$header = "Home";
+include 'inc/header.php';
+include 'inc/checklogin.php';
+?>
 
         <!-- page content -->
         <div class="right_col" role="main">

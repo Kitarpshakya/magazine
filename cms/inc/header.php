@@ -1,3 +1,6 @@
+<?php 
+    include $_SERVER['DOCUMENT_ROOT'].'config/init.php';
+ ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>

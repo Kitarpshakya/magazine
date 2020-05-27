@@ -1,10 +1,10 @@
 <?php
-	include $_SERVER['DOCUMUNT_ROOT'].'config/init.php';
-	debugger($post);
-	if ($post){
+	include $_SERVER['DOCUMENT_ROOT'].'config/init.php';
+	debugger($_POST);
+	if ($_POST){
 
 	}else{
-		redirect('../')
+		redirect('../login','error','Unauthorized access..');
 	}
 
 ?>

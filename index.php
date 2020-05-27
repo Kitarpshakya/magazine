@@ -1,7 +1,7 @@
 <?php 
 	
 	include $_SERVER['DOCUMENT_ROOT'].'config/init.php'; 
-	// redirect('cms/index');
+	redirect('cms/index');
 	$user = new user();
 	$data = array(
 			'username' => 'Shakya',
@@ -14,6 +14,8 @@
 
 	$datas = $user->updateUserByEmail($data,'admin@magazine.com');
 	debugger($datas);
+
+	
 
 	
 ?>

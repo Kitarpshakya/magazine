@@ -1,3 +1,6 @@
+<?php
+  include $_SERVER['DOCUMENT_ROOT'].'config/init.php';
+  ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -19,7 +22,7 @@
     <link href="assets/animate.css/animate.min.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
-    <link href="css/custom.min.css" rel="stylesheet">
+    <link href="assets/css/custom.min.css" rel="stylesheet">
   </head>
 
   <body class="login">
@@ -30,26 +33,27 @@
       <div class="login_wrapper">
         <div class="animate form login_form">
           <section class="login_content">
+            <?php flashMessage();?>
             <form action="process/login.php" method="post">
               <h1>Login Form</h1>
               <div>
-                <input type="text" class="form-control" placeholder="Username" required="" />
+                <input type="text" class="form-control" placeholder="Email" required=""name="email"/>
               </div>
               <div>
-                <input type="password" class="form-control" placeholder="Password" required="" />
+                <input type="password" class="form-control" placeholder="Password" required="" name="password"/>
               </div>
               <div>
-                <a class="btn btn-default submit" href="index.html">Log in</a>
-                <a class="reset_pass" href="#">Lost your password?</a>
+                <button class="btn btn-default submit" type="submit">Log in</button>
+                <!-- <a class="reset_pass" href="#">Lost your password?</a> -->
               </div>
 
               <div class="clearfix"></div>
 
               <div class="separator">
-                <p class="change_link">New to site?
+               <!--  <p class="change_link">New to site?
                   <a href="#signup" class="to_register"> Create Account </a>
                 </p>
-
+ -->
                 <div class="clearfix"></div>
                 <br />
 
@@ -62,7 +66,7 @@
           </section>
         </div>
 
-        <!-- <div id="register" class="animate form registration_form"> -->
+        <!-- <div id="register" class="animate form registration_form">
           <section class="login_content">
             <form>
               <h1>Create Account</h1>
@@ -95,7 +99,7 @@
               </div>
             </form>
           </section>
-        <!-- </div> -->
+        </div> -->
       </div>
     </div>
   </body>

@@ -27,15 +27,23 @@
 		@header('location: '.$loc); 
 	}
 
-	// function flashMessage(){
-	// 	if(isset($_SESSION['error']) && !empty($_SESSION['error'])){
-	// 		echo "<span class='alert alert-danger'>".$_SESSION['error']."</span>";
-	// 		unset($_SESSION['error']);
-	// 	}elseif (isset($_SESSION['success']) && !empty($_SESSION['success'])) {
-	// 		echo "<span class='alert alert-warning'>".$_SESSION['error']."</span>";
-	// 		unset($_SESSION['error']);
-	// 	}else{ 
-
-	// 	}
-	// }
+	function flashMessage(){
+		if(isset($_SESSION['error']) && !empty($_SESSION['error'])){
+			echo "<span class='alert alert-danger'>".$_SESSION['error']."</span>";
+			unset($_SESSION['error']);
+		}elseif (isset($_SESSION['success']) && !empty($_SESSION['success'])) {
+			echo "<span class='alert alert-primary'>".$_SESSION['success']."</span>";
+			unset($_SESSION['success']);
+		}elseif(isset($_SESSION['warning']) && !empty($_SESSION['success'])) {
+			echo "<span class='alert alert-warning'>".$_SESSION['warning']."</span>";
+			unset($_SESSION['warning']);
+		}
+		?>
+		<script type="text/javascript">
+			setTimeout(function(){
+				$('.alert').slideUp('slow');
+			},3000);
+		</script>
+		<?php
+	}
 ?>

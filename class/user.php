@@ -29,6 +29,18 @@
 			return $this->getData($args,true);
 		}
 
+		public function getUserbySessionToken($sessiontoken,$is_die=false){
+			$args = array(
+				'where' => array(
+						'and' => array(
+							'session_token' => $sessiontoken,
+							'status' => 'Active'
+						)
+					)
+			);
+			return $this->getData($args,$is_die);
+		}
+
 		public function updateUserByEmail($data,$email,$is_die=false){
 			$args = array(
 				'where' => array(
